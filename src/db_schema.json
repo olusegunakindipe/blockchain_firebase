@@ -1,0 +1,17 @@
+{
+  "candidates" : [ 
+     { "fname": "Alex Meraz",
+       "lname": "Alex Meraz",
+       "age" : 24,
+       "position" : "ameraz@email.com"
+     }
+    ],
+
+    "voters" : [ 
+      {"fname": "Alex Meraz",
+        "lname": "Alex Meraz",
+        "age" : 24,
+        "phone" : 24
+      }
+    ]
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Election System</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+   
+    
+  </head>
+  <body>
+    <div class="container" style="width: 650px;">
+            <div class="row" id="mainpage">
+                <h1 class="text-center"><b> Election System </b></h1>
+                <hr>
+                <hr>
+                    <div class="col-md-12 well" style="margin-bottom:20px;"> 
+                       
+                        <div class="col-md-6">
+                            <button type="submit" onClick="App.authDiv()" class="btn btn-warning" value="Vote" >Cast Vote<span class="glyphicon glyphicon-send"></span></button>
+                        </div>
+                        <div class="col-md-6 pull-right">
+                            <button type="submit" onClick="App.countVoteDiv()" class="btn btn-warning" value="Cancel" >Total Votes <span class="glyphicon glyphicon-send"></span></button>
+                        </div>
+                    </div>
+        <div id="voting" style="display:none">
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <h1 class="text-center"><b>Election System</b></h1>
+                    <hr/>
+                    <br/> 
+                    <div id="loader">
+                        <p class="text-center"> Loading....</p>   
+                    </div>
+            
+                    <div id="content" class="row" style="display:none">
+                        <!--load candidates here -->
+                        
+                        
+                        <p id="accountAddress" class="text-center"></p>
+
+                        <div id="candidateTemplate" style="display:none">
+                    
+                            <div id="content1">
+                                <!--form onSubmit= App,castVote(); return false;-->
+                                <div class="col-sm-6 col-lg-4">                
+                                    <div class="panel panel-default panel-vote">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title"> </h3>
+                                        </div> 
+                                        <div class="panel-body">               
+                                        <img alt="100*100" id="img1" data-src="holder.js" class="img-rounded img-center" style="width:100%;" src="" data-holder-rendered="true">
+                                            <br/><br/>
+                                            <strong> Name</strong>: <span class="candidate-name"> </span><br/><br/>
+                                            <strong> Age</strong>: <span class="candidate-age"> </span><br/><br/>
+                                            <strong> Post</strong>: <span class="candidate-post"> </span><br/><br/>
+                                            <strong> Party</strong>: <span class="candidate-party"> </span>
+                                            <img alt="100*100" data-src="holder.js" class="img-rounded img-center" id="logo"  src="" data-holder-rendered="true">
+                                            <br/><br/>
+                                            <button class="btn btn-default btn-primary btn-vote"  type="button" data-id="1"> VOTE </button>                                                        
+                                        
+                                        </div> 
+                                    </div>                                             
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        
+        <div id="counting" style="display: none">
+            <div> <b> Total votes:</b>&nbsp;&nbsp;
+                <span id="total-votes"> </span>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Names</th>
+                        <th scope="col">Votes</th>
+                    </tr>
+                </thead>
+                <tbody id="candidatesResults"></tbody>
+            </table>
+            <hr/>
+        </div>
+                
+                
+                
+          
+        
+                                   
+    </div>    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>-->
+            
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-storage.js"></script>
+
+    <script type="text/javascript" src="./js/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

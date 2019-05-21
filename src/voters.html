@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>my-product</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700,300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            background: deepskyblue;
+            padding: 0px 30%;
+        }
+
+        .app {
+
+            background: #ffff;
+            margin: 0 auto;
+            display: flex;
+            padding: 10px;
+            margin-top: 50px;
+            align-items: center;
+            min-height: 450px;
+            flex-direction: column;
+            min-width: 100%;
+        }
+
+        input,
+        select {
+
+            border: 1px solid #000;
+            padding: 10px;
+            min-width: 100%;
+            display: block;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        select {
+
+            cursor: pointer;
+        }
+
+        button {
+
+            min-width: 40%;
+            cursor: pointer;
+            background: #000;
+            border: 1px solid #000;
+            color: #fff;
+            min-height: 50px;
+            transition: .9s;
+        }
+
+        button:hover {
+            color: #000;
+            transition: .9s;
+            background: #fff;
+        }
+
+        input[type=file] {
+
+            cursor: pointer;
+        }
+
+        @media(max-width:991px) {
+
+            body {
+
+                padding: 0px 10%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <h4> Voters Registration Form</h4>
+        <div>
+
+            <form id='voterForm'>
+              <label> Email: <input type="email" placeholder="Email" id="email" >
+              </label>  
+               Password:  <input type="password" id="password" placeholder="Password..." value="" class="form-control"  type="text" minlength="1" maxlength="10" required>
+               Firstname: <input type="text" placeholder="First Name" id="fname" value="">
+                Lastname:<input type="text" placeholder="Last Name" id="lname" value="">
+                National Identification number:<input type="text" placeholder="Last Name" id="nin" value="">
+
+               Phone Number: <input type="number" placeholder="Phone" id="phone"  value="">
+                Age: <input type="number" placeholder="Age" id="age"  value="">
+               Photo: <input type="file"  id="picture" placeholder="">
+                <button type="button" onclick="registerVoter()" value="submit">Submit</button>
+                <button type="button" onclick="ResetVoter()" value="submit">Reset</button>
+            </form>
+
+        </div>
+
+    </div>
+    <!-- built files will be auto injected -->
+    
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-storage.js"></script>
+    <script type="text/javascript" src="./js/firebase.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/reg_voter_handler.js"></script>
+    <!-- <script src="js/app.js"></script> -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

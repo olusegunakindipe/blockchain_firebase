@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>my-product</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700,300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+
+            background: deepskyblue;
+            padding: 0px 30%;
+        }
+
+        .app {
+
+            background: #ffff;
+            min-height: 400px;
+            margin: 0 auto;
+            display: flex;
+            padding: 10px;
+            margin-top: 50px;
+            align-items: center;
+            min-height: 500px;
+            flex-direction: column;
+            min-width: 100%;
+        }
+
+        input,
+        select {
+
+            border: 1px solid #000;
+            padding: 10px;
+            min-width: 100%;
+            display: block;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        select {
+
+            cursor: pointer;
+        }
+
+        button {
+
+            min-width: 100%;
+            cursor: pointer;
+            background: #000;
+            border: 1px solid #000;
+            color: #fff;
+            min-height: 50px;
+            transition: .9s;
+        }
+
+        button:hover {
+            color: #000;
+            transition: .9s;
+            background: #fff;
+        }
+
+        @media(max-width:991px) {
+
+            body {
+
+                padding: 0px 10%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app container" style="width: 650px;">
+        <div class="row">
+            <div class="col-lg-12 ">
+                <h1 class="text-center">Candidate Form</h1>
+                <hr/>
+                <br/> 
+                <div id="loader0">
+                   <!-- <p class="text-center"> Loading....</p>   -->
+                </div>
+        
+                <div id="content0" class="row" style="display:non">
+                <!--load candidates here -->
+                                
+
+                    <form action="">
+                        <input type="text" placeholder="First Name" id="fname">
+                        <input type="text" placeholder="Last Name" id="lname">
+                        <input type="text" placeholder="Age" id="age">
+                        <select name="position" id="position">
+
+                            <option value="">Select Position</option>
+
+                            <option value="president">President</option>
+
+                            <option value="governor">Governor</option>
+                            <option value="senator">Senate</option>
+                            
+                        </select>
+                        <select name="party" id="party">
+
+                            <option value="">Select Party</option>
+
+                            <option value="apc">APC</option>
+
+                            <option value="pdp">PDP</option>
+                        </select>
+                        <input type="file" id="picture" placeholder="">
+                        <button type="button" onclick="registerCandidate()">Submit</button>
+                        <button type="button" onclick="reset()">Reset</button>
+                    </form>
+                </div>
+            </div>
+                       
+
+        </div>
+
+    </div>
+    <!-- built files will be auto injected -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-storage.js"></script>
+
+    <script type="text/javascript" src="./js/firebase.js"></script>
+
+    <script src="./js/reg_candidate_handler.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vuejs-datepicker"></script>
+</body>
+
+</html>
